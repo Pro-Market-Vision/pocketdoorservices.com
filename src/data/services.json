@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Roller Replacement And Frame Repair",
+    "description": "Roller replacement and frame repair services are essential for maintaining the smooth operation and structural integrity of sliding doors.",
+    "image": "/images/services/roller-replacement.webp"
+  },
+  {
+    "name": "Lock Repair",
+    "description": "Lock repair services focus on fixing faulty or damaged locks to ensure the security and functionality of doors and windows.",
+    "image": "/images/services/lock-repair.webp"
+  },
+  {
+    "name": "Hinge Repair/Replacement",
+    "description": "Hinge repair and replacement services address issues with door hinges, such as squeaking, misalignment, or breakage.",
+    "image": "/images/services/hinge-repair.webp"
+  },
+  {
+    "name": "Commercial Door Installation",
+    "description": "Commercial door installation services involve the professional fitting of doors designed for business environments.",
+    "image": "/images/services/installation.webp"
+  },
+  {
+    "name": "Commercial Door Repair",
+    "description": "Commercial door repair services focus on fixing and restoring the functionality of doors in business environments.",
+    "image": "/images/services/repair.webp"
+  },
+  {
+    "name": "Commercial Door Lock Services",
+    "description": "Commercial door lock services encompass the installation, repair, and maintenance of locking systems for business premises.",
+    "image": "/images/services/lock-services.webp"
+  }
+]
