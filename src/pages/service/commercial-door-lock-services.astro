@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Commercial Door Lock Services | Pocket Door Services"
+  description="Comprehensive commercial door lock services in Orlando, Miami & Fort Myers, FL. Smart locks, master key systems, 24/7 emergency lockout. Call (954) 727-5410."
+>
+
+  <!-- Hero -->
+  <section class="relative bg-primary text-white py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/services/lock-services.webp')" role="img" aria-label="Commercial door lock services"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/70"></div>
+    <div class="relative max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Commercial Door Lock Services</h1>
+        <p class="text-xl md:text-2xl font-light mb-4 text-gray-200">Serving Orlando, Miami & Fort Myers, FL</p>
+        <p class="text-base md:text-lg text-gray-300 mb-8">
+          Comprehensive commercial lock services including installation, upgrades, repair, emergency lockout assistance, and master key systems. Protect your business with our expert lock solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+          <a href="tel:9547275410" class="bg-white text-primary font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-gray-100 transition-colors text-center" aria-label="Call Pocket Door Services">
+            (954) 727-5410
+          </a>
+          <a href="/contact" class="border-2 border-white text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-white hover:text-primary transition-colors text-center">
+            FREE ESTIMATE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-heading text-4xl md:text-5xl tracking-wide text-primary mb-4">Complete Commercial Lock Solutions</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Our commercial door lock services cover everything your business needs to stay secure. We offer lock installation and upgrades, including smart locks and biometric systems, to bring your security up to modern standards. Our lock repair and maintenance services keep your existing systems functioning reliably.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          We provide 24/7 emergency lockout services to get you back into your business quickly when you need it most. Our master key systems simplify access management across your facility, giving you control without compromising security. We also offer comprehensive security assessments to identify vulnerabilities and recommend solutions.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Additional services include emergency repairs, track and roller replacement, hardware repair, door realignment, and preventive maintenance programs. Our goal is to be your single source for all commercial door lock needs, providing reliable service that keeps your business secure and running smoothly.
+        </p>
+      </div>
+      <div>
+        <img src="/images/services/lock-services.webp" alt="Commercial door lock services" class="rounded-lg shadow-lg w-full" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-gray-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-heading text-4xl md:text-5xl text-center tracking-wide text-primary mb-10">Why Choose Pocket Door Services</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { name: "Fast & Reliable", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
+          { name: "Transparent Pricing", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+          { name: "Emergency 24/7", icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" },
+          { name: "Expert Technicians", icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" },
+        ].map((f) => (
+          <div class="text-center p-6 bg-white rounded-lg shadow-sm">
+            <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={f.icon} /></svg>
+            </div>
+            <h3 class="font-heading text-lg tracking-wide text-primary">{f.name}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Services -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-heading text-4xl md:text-5xl text-center tracking-wide text-primary mb-10">Our Other Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { name: "Roller Replacement & Frame Repair", href: "/service/roller-replacement-and-frame-repair", image: "/images/services/roller-replacement.webp" },
+          { name: "Lock Repair", href: "/service/lock-repair", image: "/images/services/lock-repair.webp" },
+          { name: "Hinge Repair/Replacement", href: "/service/hinge-repair-replacement", image: "/images/services/hinge-repair.webp" },
+          { name: "Commercial Door Installation", href: "/service/commercial-door-installation", image: "/images/services/installation.webp" },
+          { name: "Commercial Door Repair", href: "/service/commercial-door-repair", image: "/images/services/repair.webp" },
+        ].map((s) => (
+          <a href={s.href} class="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-border/30">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={s.image} alt={`${s.name} service`} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <div class="p-5">
+              <h3 class="font-heading text-2xl tracking-wide text-primary">{s.name}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-4xl md:text-5xl tracking-wide mb-4">Need Commercial Lock Services?</h2>
+      <p class="text-gray-300 leading-relaxed mb-8">
+        Contact our expert technicians today for comprehensive commercial door lock services in Orlando, Miami, and Fort Myers. From emergency lockouts to master key systems, we have you covered.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:9547275410" class="inline-flex bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-blue-700 transition-colors">Call Now (954) 727-5410</a>
+        <a href="/contact" class="inline-flex border-2 border-white text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-white hover:text-primary transition-colors">FREE ESTIMATE</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

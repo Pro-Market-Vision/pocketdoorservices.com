@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const services = [
+  { name: "Roller Replacement And Frame Repair", slug: "roller-replacement-and-frame-repair", description: "Expert roller replacement and frame repair to restore smooth pocket door operation and structural integrity." },
+  { name: "Lock Repair", slug: "lock-repair", description: "Professional lock repair services to ensure your pocket doors provide reliable security and functionality." },
+  { name: "Hinge Repair/Replacement", slug: "hinge-repair-replacement", description: "Comprehensive hinge repair and replacement to eliminate squeaking, misalignment, and breakage issues." },
+  { name: "Commercial Door Installation", slug: "commercial-door-installation", description: "Professional pocket door installation for commercial spaces, designed for durability and high-traffic use." },
+  { name: "Commercial Door Repair", slug: "commercial-door-repair", description: "Fast, reliable commercial pocket door repair to minimize downtime and restore full functionality." },
+  { name: "Commercial Door Lock Services", slug: "commercial-door-lock-services", description: "Complete commercial lock services including installation, repair, and maintenance of locking systems." },
+];
+---
+
+<Layout
+  title="Pocket Door Services Miami | Installation & Repair"
+  description="Premier pocket door services in Miami, FL. Expert repair, installation & maintenance for residential and commercial properties. 24/7 emergency service. Call (954) 727-5410."
+>
+
+  <!-- Hero -->
+  <section class="relative bg-primary text-white py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/services/hero.webp')" role="img" aria-label="Pocket door installation service in Miami, FL"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/70"></div>
+    <div class="relative max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Pocket Door Services Miami</h1>
+        <p class="text-xl md:text-2xl font-light mb-4 text-gray-200">Serving Miami & South Florida</p>
+        <p class="text-base md:text-lg text-gray-300 mb-8">
+          Premier pocket door services specializing in repair, installation, and maintenance. Our expert team provides top-tier pocket door solutions for residential and commercial properties throughout Miami and South Florida.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-12">
+          <a href="tel:9547275410" class="bg-white text-primary font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-gray-100 transition-colors text-center" aria-label="Call Pocket Door Services Miami">
+            (954) 727-5410
+          </a>
+          <a href="/contact" class="border-2 border-white text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-white hover:text-primary transition-colors text-center">
+            FREE ESTIMATE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-heading text-4xl md:text-5xl tracking-wide text-primary mb-4">Expert Solutions for Your Miami Property</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          As Miami's premier pocket door service provider, we deliver expert repair, installation, and maintenance for both residential and commercial properties. Whether you need a new pocket door installed or an existing one repaired, our skilled technicians have the experience and tools to get the job done right.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Pocket doors are an ideal solution for Miami properties where space optimization and modern aesthetics matter. We offer free estimates and 24/7 emergency services, ensuring your pocket doors are always functioning at their best.
+        </p>
+      </div>
+      <div>
+        <img src="/images/services/about.webp" alt="Pocket door repair service by expert technician in Miami" class="rounded-lg shadow-lg w-full" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 bg-gray-light" id="services">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-heading text-4xl md:text-5xl text-center tracking-wide text-primary mb-10">Our Pocket Door Services in Miami</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((s) => (
+          <a href={`/service/${s.slug}`} class="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-border/30 block">
+            <div class="p-6">
+              <h3 class="font-heading text-2xl tracking-wide text-primary mb-2 group-hover:text-accent transition-colors">{s.name}</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">{s.description}</p>
+              <span class="text-accent font-heading tracking-wide group-hover:underline">Learn More &rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency CTA -->
+  <section class="py-16 bg-primary text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-4xl md:text-5xl tracking-wide mb-4">24/7 Pocket Door Emergency Services in Miami</h2>
+      <p class="text-gray-300 leading-relaxed mb-8">
+        Need urgent pocket door repair in Miami? Our technicians are available around the clock to handle emergency repairs and restore your doors quickly. Free estimates and transparent pricing on every job.
+      </p>
+      <a href="tel:9547275410" class="inline-flex bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-blue-700 transition-colors">Call Now (954) 727-5410</a>
+    </div>
+  </section>
+
+  <!-- Estimate -->
+  <section class="py-16 bg-gray-light">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-heading text-4xl md:text-5xl tracking-wide text-primary mb-4">Get Your Free Pocket Door Estimate</h2>
+      <p class="text-gray-600 leading-relaxed mb-8">
+        Enhance your Miami property with the convenience and elegance of pocket doors. Contact us today for a free estimate and discover how our expert services can transform your home or business.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:9547275410" class="bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-blue-700 transition-colors">Call (954) 727-5410</a>
+        <a href="/contact" class="bg-primary text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-dark transition-colors">Request Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
