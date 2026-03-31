@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+  {
+    title: "5 Signs Your Pocket Door Rollers Need Replacing",
+    slug: "signs-your-pocket-door-rollers-need-replacing",
+    date: "March 24, 2026",
+    description: "Learn the 5 warning signs that your pocket door rollers are failing — from dragging and grinding to doors jumping off the track. Expert advice on when to replace.",
+    image: "/images/old tracks.webp",
+    imageAlt: "Worn pocket door track showing signs of roller damage",
+    readTime: "8 min read"
+  },
+  {
+    title: "Pocket Door Lock & Hinge Problems: When to Repair vs Replace",
+    slug: "pocket-door-lock-hinge-problems-guide",
+    date: "March 10, 2026",
+    description: "Complete guide to pocket door lock and hinge problems. Learn when to repair vs replace, common issues like locks not latching and sagging hinges.",
+    image: "/images/new lock.webp",
+    imageAlt: "New pocket door lock installed by Pocket Door Services",
+    readTime: "9 min read"
+  }
+];
+---
+
+<Layout
+  title="Pocket Door Blog | Tips, Guides & Expert Advice"
+  description="Expert pocket door guides, installation tips, repair advice, and cost breakdowns from Florida's top-rated pocket door specialists. Updated regularly."
+>
+
+  <section class="relative bg-primary text-white py-20 md:py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/hero.png')" role="img" aria-label="Pocket door services blog"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/75 to-primary/50"></div>
+    <div class="relative max-w-7xl mx-auto px-4 text-center">
+      <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Pocket Door Blog</h1>
+      <p class="text-xl md:text-2xl font-light text-gray-200">Expert Tips, Guides & Industry Insights</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="group bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div class="aspect-[16/9] overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.imageAlt}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-accent font-heading tracking-wide mb-2">{post.date} · {post.readTime}</p>
+              <h2 class="font-heading text-2xl tracking-wide text-primary mb-3 group-hover:text-accent transition-colors">{post.title}</h2>
+              <p class="text-gray-600 leading-relaxed mb-4">{post.description}</p>
+              <span class="text-accent font-heading tracking-wide group-hover:underline">READ MORE →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-primary text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-4xl md:text-5xl tracking-wide mb-4">Need Pocket Door Help Now?</h2>
+      <p class="text-gray-300 leading-relaxed mb-8">
+        Don't wait for a small problem to become a big one. Our expert technicians serve Orlando, Miami, Fort Myers, and surrounding areas with same-day service available.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:9547275410" class="inline-flex justify-center bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-blue-700 transition-colors">Call Now (954) 727-5410</a>
+        <a href="/contact" class="inline-flex justify-center border-2 border-white text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-white hover:text-primary transition-colors">FREE ESTIMATE</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

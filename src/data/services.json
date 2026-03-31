@@ -1,38 +1,38 @@
 [
   {
-    "name": "Roller Replacement And Frame Repair",
+    "name": "Roller Replacement & Frame Repair",
     "slug": "roller-replacement-and-frame-repair",
-    "description": "Roller replacement and frame repair services are essential for maintaining the smooth operation and structural integrity of sliding doors.",
-    "image": "/images/services/roller-replacement.webp"
+    "description": "Worn-out rollers are the #1 reason pocket doors stick, drag, or jump off the track. We replace rollers with contractor-grade hardware matched to your door's weight and realign the frame so it glides like new.",
+    "image": "/images/old tracks.webp"
   },
   {
     "name": "Lock Repair",
     "slug": "lock-repair",
-    "description": "Lock repair services focus on fixing faulty or damaged locks to ensure the security and functionality of doors and windows.",
-    "image": "/images/services/lock-repair.webp"
+    "description": "A pocket door lock that won't latch defeats the purpose of the door. We repair and replace mortise locks, privacy locks, and passage hardware — restoring full security and function in a single visit.",
+    "image": "/images/new lock.webp"
   },
   {
-    "name": "Hinge Repair/Replacement",
+    "name": "Hinge Repair & Replacement",
     "slug": "hinge-repair-replacement",
-    "description": "Hinge repair and replacement services address issues with door hinges, such as squeaking, misalignment, or breakage.",
-    "image": "/images/services/hinge-repair.webp"
+    "description": "Squeaking, sagging, or misaligned hinges cause pocket doors to bind and wear unevenly. We diagnose the root cause — not just the symptom — and replace hinges with hardware rated for years of daily use.",
+    "image": "/images/pocket door 2.webp"
   },
   {
     "name": "Commercial Door Installation",
     "slug": "commercial-door-installation",
-    "description": "Commercial door installation services involve the professional fitting of doors designed for business environments.",
-    "image": "/images/services/installation.webp"
+    "description": "Offices, medical facilities, restaurants, and retail spaces trust us for pocket door installations that meet commercial-grade standards. We handle framing, hardware, ADA compliance considerations, and post-drywall adjustments.",
+    "image": "/images/client photo.webp"
   },
   {
     "name": "Commercial Door Repair",
     "slug": "commercial-door-repair",
-    "description": "Commercial door repair services focus on fixing and restoring the functionality of doors in business environments.",
-    "image": "/images/services/repair.webp"
+    "description": "High-traffic commercial pocket doors take a beating. We repair tracks, rollers, frames, and panels — minimizing downtime so your business keeps running. Same-day emergency service available.",
+    "image": "/images/walk through.webp"
   },
   {
     "name": "Commercial Door Lock Services",
     "slug": "commercial-door-lock-services",
-    "description": "Commercial door lock services encompass the installation, repair, and maintenance of locking systems for business premises.",
-    "image": "/images/services/lock-services.webp"
+    "description": "From privacy locks in medical exam rooms to high-security commercial hardware, we install, rekey, and repair locking systems built for the demands of business environments.",
+    "image": "/images/worker.webp"
   }
 ]
