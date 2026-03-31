@@ -6,10 +6,23 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
 }
 
-const { title, description = "Pocket Door Services — expert pocket door installation, repair & maintenance in Orlando, Miami & Fort Myers, FL. 24/7 emergency service. Call (954) 727-5410." } = Astro.props;
+const { title, description = "Pocket Door Services — expert pocket door installation, repair & maintenance in Orlando, Miami & Fort Myers, FL. 24/7 emergency service. Call (954) 727-5410.", keywords = "pocket door services, pocket door installation, pocket door repair, pocket door maintenance, Orlando, Miami, Fort Myers, FL, sliding pocket doors, commercial pocket doors" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Build breadcrumb items from URL
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  { name: "Home", url: "https://pocketdoorservices.com/" }
+];
+let cumulativePath = "";
+for (const segment of pathSegments) {
+  cumulativePath += `/${segment}`;
+  const name = segment.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+  breadcrumbItems.push({ name, url: `https://pocketdoorservices.com${cumulativePath}` });
+}
 ---
 <!doctype html>
 <html lang="en">
@@ -19,6 +32,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={canonicalURL.href} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="alternate" hreflang="en" href={canonicalURL.href} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL.href} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -31,6 +47,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:image" content={new URL('/images/logo.png', Astro.site).href} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://api.web3forms.com" />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -59,6 +81,43 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         "closes": "23:59"
       },
       "sameAs": []
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbItems.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.name,
+        "item": item.url
+      }))
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Pocket Door Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Pocket Door Services",
+        "url": "https://pocketdoorservices.com"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Orlando" },
+        { "@type": "City", "name": "Miami" },
+        { "@type": "City", "name": "Fort Myers" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Pocket Door Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pocket Door Installation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pocket Door Repair" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Door Lock Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hinge Repair & Replacement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lock Repair" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roller Replacement & Frame Repair" } }
+        ]
+      }
     })} />
   </head>
   <body class="font-body text-gray-800 antialiased">

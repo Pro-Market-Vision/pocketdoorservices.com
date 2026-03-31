@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+  {
+    title: "Pocket Door Installation Cost in Florida: What to Expect (2025)",
+    slug: "pocket-door-installation-cost-florida",
+    excerpt: "Planning a pocket door installation in Florida? Learn about typical costs, factors that affect pricing, and how to get the best value for your investment.",
+    date: "2025-01-15"
+  },
+  {
+    title: "Pocket Doors vs Regular Doors: Pros, Cons & Which Is Right for You",
+    slug: "pocket-doors-vs-regular-doors",
+    excerpt: "Trying to decide between a pocket door and a regular door? We break down the advantages, disadvantages, and best use cases for each option.",
+    date: "2025-01-10"
+  },
+  {
+    title: "Pocket Door Maintenance Tips: Keep Your Doors Running Smoothly",
+    slug: "pocket-door-maintenance-tips",
+    excerpt: "Keep your pocket doors operating like new with these essential maintenance tips from our expert technicians in Orlando, Miami, and Fort Myers.",
+    date: "2025-01-05"
+  }
+];
+---
+
+<Layout
+  title="Pocket Door Blog | Tips, Guides & Expert Advice"
+  description="Expert pocket door guides, installation tips, cost breakdowns, and maintenance advice from Pocket Door Services in Orlando, Miami & Fort Myers, FL."
+  keywords="pocket door blog, pocket door tips, pocket door installation guide, pocket door repair tips, Florida pocket door services"
+>
+
+  <!-- Hero -->
+  <section class="bg-primary text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="font-heading text-5xl md:text-6xl tracking-wide mb-4">Pocket Door Blog</h1>
+      <p class="text-xl text-gray-300">Expert guides, tips, and advice for pocket door installation, repair, and maintenance in Florida.</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="space-y-8">
+        {posts.map((post) => (
+          <article class="bg-gray-light rounded-lg p-8 border border-gray-border/30 hover:shadow-lg transition-shadow">
+            <time class="text-sm text-gray-400">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+            <h2 class="font-heading text-2xl md:text-3xl tracking-wide text-primary mt-2 mb-3">
+              <a href={`/blog/${post.slug}`} class="hover:text-accent transition-colors">{post.title}</a>
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4">{post.excerpt}</p>
+            <a href={`/blog/${post.slug}`} class="inline-flex items-center gap-1 text-accent font-heading tracking-wide hover:gap-2 transition-all duration-300">
+              READ MORE
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gray-light">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl tracking-wide text-primary mb-4">Need Pocket Door Services?</h2>
+      <p class="text-gray-600 mb-6">Our expert technicians serve <a href="/location/pocket-door-services-orlando" class="text-accent hover:underline">Orlando</a>, <a href="/location/pocket-door-services-miami" class="text-accent hover:underline">Miami</a>, and <a href="/location/fort-myers" class="text-accent hover:underline">Fort Myers</a>. Get a free estimate today.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:9547275410" class="bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-blue-700 transition-colors">(954) 727-5410</a>
+        <a href="/contact" class="border-2 border-primary text-primary font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-primary hover:text-white transition-colors">FREE ESTIMATE</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
