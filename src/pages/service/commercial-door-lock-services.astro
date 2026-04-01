@@ -118,4 +118,19 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Commercial Pocket Door Lock Services",
+    "description": "Commercial pocket door lock installation, repair, and rekeying. Privacy locks, keyed entry, master key systems, 24/7 emergency lockout.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Pocket Door Services",
+      "telephone": "+1-954-727-5410",
+      "url": "https://pocketdoorservices.com"
+    },
+    "areaServed": ["Orlando, FL", "Miami, FL", "Fort Myers, FL"],
+    "serviceType": "Commercial Pocket Door Lock Services"
+  })} />
+
 </Layout>

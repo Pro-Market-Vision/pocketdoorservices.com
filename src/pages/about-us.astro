@@ -45,7 +45,7 @@ import services from '../data/services.json';
       <p class="text-gray-300 leading-relaxed mb-8">
         A jammed pocket door in a bathroom, a derailed door blocking a hallway, a broken lock on a commercial entrance — these aren't next-week problems. Our emergency team is on call 24/7 with fully stocked trucks, ready to respond across Orlando, Miami, and Fort Myers. Most emergency pocket door repairs are completed in a single visit.
       </p>
-      <a href="tel:9547275410" class="inline-flex bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-blue-700 transition-colors">Call Now 954-727-5410</a>
+      <a href="tel:9547275410" class="inline-flex bg-accent text-white font-heading text-xl tracking-wide px-8 py-4 rounded hover:bg-blue-700 transition-colors">Call Now (954) 727-5410</a>
     </div>
   </section>
 
@@ -145,10 +145,10 @@ import services from '../data/services.json';
         <div id="form-result" class="text-center text-sm mt-2 hidden"></div>
       </form>
       <script>
-        const RECAPTCHA_SITE_KEY = '6LcSWp4sAAAAAPTA9SQgLbfVV5r_mSdchrxDmgnj';
-        const script = document.createElement('script');
-        script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
-        document.head.appendChild(script);
+        const RECAPTCHA_SITE_KEY = '6Lfr26EsAAAAALbvO6AH8o0hH-msBboNjMAtKweo';
+        const rcScript = document.createElement('script');
+        rcScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+        document.head.appendChild(rcScript);
 
         const form = document.getElementById('contact-form');
         form?.addEventListener('submit', async (e) => {

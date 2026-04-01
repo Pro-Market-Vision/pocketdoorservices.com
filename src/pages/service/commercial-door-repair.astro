@@ -118,4 +118,19 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Commercial Pocket Door Repair",
+    "description": "Fast commercial pocket door repair with same-day emergency service. Fully stocked trucks, minimal business disruption.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Pocket Door Services",
+      "telephone": "+1-954-727-5410",
+      "url": "https://pocketdoorservices.com"
+    },
+    "areaServed": ["Orlando, FL", "Miami, FL", "Fort Myers, FL"],
+    "serviceType": "Commercial Pocket Door Repair"
+  })} />
+
 </Layout>

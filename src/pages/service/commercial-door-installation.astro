@@ -121,4 +121,19 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Commercial Pocket Door Installation",
+    "description": "Commercial-grade pocket door installation for offices, medical facilities, restaurants, and retail. ADA compliance, precision framing, post-drywall adjustment.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Pocket Door Services",
+      "telephone": "+1-954-727-5410",
+      "url": "https://pocketdoorservices.com"
+    },
+    "areaServed": ["Orlando, FL", "Miami, FL", "Fort Myers, FL"],
+    "serviceType": "Commercial Pocket Door Installation"
+  })} />
+
 </Layout>

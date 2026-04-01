@@ -8,9 +8,15 @@ const articleSchema = {
   "description": "Complete guide to pocket door lock and hinge problems. Learn when to repair vs replace, common issues like locks not latching and sagging hinges, and why pocket door hardware is unique.",
   "image": "https://pocketdoorservices.com/images/new lock.webp",
   "author": {
-    "@type": "Organization",
-    "name": "Pocket Door Services",
-    "url": "https://pocketdoorservices.com"
+    "@type": "Person",
+    "name": "Ilan",
+    "jobTitle": "Pocket & Commercial Door Expert",
+    "image": "https://pocketdoorservices.com/images/ilan-profile.webp",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pocket Door Services",
+      "url": "https://pocketdoorservices.com"
+    }
   },
   "publisher": {
     "@type": "Organization",
@@ -90,13 +96,22 @@ const faqSchema = {
         <p class="text-accent font-heading text-lg tracking-wide mb-2">POCKET DOOR BLOG</p>
         <h1 class="font-heading text-4xl md:text-6xl tracking-wide mb-4">Pocket Door Lock & Hinge Problems: When to Repair vs Replace</h1>
         <p class="text-gray-300 text-sm">Published March 10, 2026 · 9 min read</p>
+        <div class="flex items-center gap-3 mt-4">
+          <img src="/images/ilan-profile.webp" alt="Ilan - Pocket & Commercial Door Expert" class="w-10 h-10 rounded-full object-cover" />
+          <div>
+            <p class="text-white font-semibold text-sm">Ilan</p>
+            <p class="text-gray-400 text-xs">Pocket & Commercial Door Expert</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Article -->
-  <article class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
+  <!-- Article + Sidebar -->
+  <div class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12">
+
+  <article>
 
       <p class="text-gray-600 leading-relaxed mb-4">
         After roller issues, lock and hinge problems are the most common pocket door complaints we hear from homeowners and business owners across Florida. A lock that will not latch, a hinge that squeaks relentlessly, or a door that sags no matter how many times you adjust it — these problems affect daily comfort, privacy, and security.
@@ -286,8 +301,55 @@ const faqSchema = {
         </div>
       </div>
 
-    </div>
   </article>
+
+  <!-- Related Services Sidebar -->
+  <aside class="lg:sticky lg:top-28 self-start space-y-6">
+    <div class="bg-gray-light rounded-xl p-6 border border-gray-border/30">
+      <h3 class="font-heading text-xl tracking-wide text-primary mb-4">Related Services</h3>
+      <div class="space-y-3">
+        <a href="/service/lock-repair" class="flex items-center gap-3 group">
+          <img src="/images/new lock.webp" alt="Lock repair service" class="w-14 h-14 rounded-lg object-cover flex-shrink-0" />
+          <div>
+            <p class="text-sm font-semibold text-primary group-hover:text-accent transition-colors">Pocket Door Lock Repair</p>
+            <p class="text-xs text-gray-500">Privacy & security restored</p>
+          </div>
+        </a>
+        <a href="/service/hinge-repair-replacement" class="flex items-center gap-3 group">
+          <img src="/images/pocket door 2.webp" alt="Hinge repair service" class="w-14 h-14 rounded-lg object-cover flex-shrink-0" />
+          <div>
+            <p class="text-sm font-semibold text-primary group-hover:text-accent transition-colors">Hinge Repair & Replacement</p>
+            <p class="text-xs text-gray-500">Fix sagging & squeaking</p>
+          </div>
+        </a>
+        <a href="/service/commercial-door-lock-services" class="flex items-center gap-3 group">
+          <img src="/images/worker.webp" alt="Commercial lock services" class="w-14 h-14 rounded-lg object-cover flex-shrink-0" />
+          <div>
+            <p class="text-sm font-semibold text-primary group-hover:text-accent transition-colors">Commercial Lock Services</p>
+            <p class="text-xs text-gray-500">Install, repair & rekey</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-primary rounded-xl p-6 text-white text-center">
+      <h3 class="font-heading text-xl tracking-wide mb-2">Need Help Now?</h3>
+      <p class="text-gray-300 text-sm mb-4">Our technicians are available 24/7 across Orlando, Miami & Fort Myers.</p>
+      <a href="tel:9547275410" class="block bg-accent text-white font-heading tracking-wide px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors mb-2">Call (954) 727-5410</a>
+      <a href="/contact" class="block border border-white/20 text-white font-heading tracking-wide px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Free Estimate</a>
+    </div>
+
+    <div class="bg-gray-light rounded-xl p-6 border border-gray-border/30">
+      <h3 class="font-heading text-lg tracking-wide text-primary mb-3">More From Our Blog</h3>
+      <a href="/blog/signs-your-pocket-door-rollers-need-replacing" class="group flex items-center gap-3">
+        <img src="/images/old tracks.webp" alt="Roller replacement guide" class="w-12 h-12 rounded-lg object-cover flex-shrink-0" />
+        <p class="text-sm text-primary group-hover:text-accent transition-colors font-medium">5 Signs Your Pocket Door Rollers Need Replacing</p>
+      </a>
+    </div>
+  </aside>
+
+    </div>
+  </div>
 
   <!-- CTA -->
   <section class="py-16 bg-primary text-white text-center">
