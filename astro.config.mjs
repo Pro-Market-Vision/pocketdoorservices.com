@@ -7,6 +7,7 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://pocketdoorservices.com',
   output: 'static',
+  trailingSlash: 'never',
   adapter: vercel(),
   vite: {
     plugins: [tailwindcss()]

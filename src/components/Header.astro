@@ -15,27 +15,31 @@ const serviceDropdown = [
 ];
 const locationDropdown = [
   { name: "Orlando", href: "/location/pocket-door-services-orlando" },
-  { name: "Miami", href: "/location/pocket-door-services-miami" },
   { name: "Fort Myers", href: "/location/fort-myers" },
+  { name: "Miami", href: "/location/pocket-door-services-miami" },
 ];
 ---
 
 <div class="bg-primary text-white text-sm py-2">
-  <div class="max-w-7xl mx-auto px-4 flex justify-end items-center gap-4">
-    <span>Serving Orlando, Miami & Fort Myers, FL</span>
+  <div class="max-w-7xl mx-auto px-4 flex justify-end items-center gap-4 whitespace-nowrap">
+    <span class="hidden sm:inline">Serving Orlando, Miami & Fort Myers, FL</span>
+    <span class="sm:hidden">Orlando · Miami · Fort Myers</span>
     <a href="tel:9547275410" class="hover:underline font-semibold" aria-label="Call Pocket Door Services">(954) 727-5410</a>
   </div>
 </div>
 
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-24">
-    <a href="/" class="flex-shrink-0">
-      <img src="/images/logo.png" alt="Pocket Door Services - Expert Installation & Repair in Orlando, Miami & Fort Myers" class="h-20 w-auto" />
+    <a href="/" class="flex-shrink-0 flex items-center gap-2">
+      <img src="/images/logo copy.png" alt="Pocket Door Services - Expert Installation & Repair in Orlando, Miami & Fort Myers" class="h-20 w-auto" />
+      <div class="flex flex-col justify-center leading-tight" style="color: #114379;">
+        <span class="font-heading text-sm sm:text-xl tracking-wide leading-none">POCKET &</span>
+        <span class="font-heading text-sm sm:text-xl tracking-wide leading-none">COMMERCIAL</span>
+        <span class="font-heading text-sm sm:text-xl tracking-wide leading-none">DOOR SERVICES</span>
+      </div>
     </a>
     <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
-      {navItems.map((item) => (
-        <a href={item.href} class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">{item.name.toUpperCase()}</a>
-      ))}
+      <a href="/" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">HOME</a>
       <div class="relative group">
         <button class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2 inline-flex items-center gap-1">
           SERVICES
@@ -62,17 +66,21 @@ const locationDropdown = [
           </div>
         </div>
       </div>
+      <a href="/about-us" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">ABOUT US</a>
+      <a href="/blog" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">BLOG</a>
+      <a href="/contact" class="font-heading text-lg tracking-wide text-primary hover:text-accent py-2">CONTACT</a>
     </nav>
     <a href="tel:9547275410" class="hidden lg:inline-flex bg-accent text-white font-heading text-lg tracking-wide px-6 py-3 rounded hover:bg-blue-700 transition-colors" aria-label="Call now for a free estimate">CALL NOW</a>
-    <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Open navigation menu">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-    </button>
+    <div class="lg:hidden flex items-center gap-2">
+      <a href="tel:9547275410" class="bg-accent text-white font-heading text-sm tracking-wide px-4 py-2 rounded hover:bg-blue-700 transition-colors" aria-label="Call now">CALL NOW</a>
+      <button id="mobile-menu-btn" class="p-2" aria-label="Open navigation menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+    </div>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 max-h-[calc(100vh-6rem)] overflow-y-auto">
     <div class="px-4 py-4 space-y-3">
-      {navItems.map((item) => (
-        <a href={item.href} class="block font-heading text-lg tracking-wide text-primary py-2">{item.name.toUpperCase()}</a>
-      ))}
+      <a href="/" class="block font-heading text-lg tracking-wide text-primary py-2">HOME</a>
       <div>
         <p class="font-heading text-lg tracking-wide text-primary py-2">SERVICES</p>
         <div class="pl-4 space-y-1">
@@ -89,6 +97,9 @@ const locationDropdown = [
           ))}
         </div>
       </div>
+      <a href="/about-us" class="block font-heading text-lg tracking-wide text-primary py-2">ABOUT US</a>
+      <a href="/blog" class="block font-heading text-lg tracking-wide text-primary py-2">BLOG</a>
+      <a href="/contact" class="block font-heading text-lg tracking-wide text-primary py-2">CONTACT</a>
       <a href="tel:9547275410" class="block bg-accent text-white font-heading text-lg tracking-wide px-6 py-3 rounded text-center mt-4">CALL NOW</a>
     </div>
   </div>

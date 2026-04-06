@@ -29,7 +29,9 @@ for (const segment of pathSegments) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.ico" />
+    <meta name="google-site-verification" content="Mip6-fpzUisHx5viJ5yupG85LJAL395t9cgjOyl6e2k" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL.href} />
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
@@ -54,6 +56,14 @@ for (const segment of pathSegments) {
     <link rel="dns-prefetch" href="https://www.google.com" />
     <link rel="dns-prefetch" href="https://api.web3forms.com" />
     <title>{title}</title>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG1H9Y4MP0"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VG1H9Y4MP0');
+    </script>
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -80,7 +90,10 @@ for (const segment of pathSegments) {
         "opens": "00:00",
         "closes": "23:59"
       },
-      "sameAs": []
+      "sameAs": [
+        "https://maps.google.com/maps?cid=14237320329652946561",
+        "https://maps.google.com/maps?cid=1347897679910126207"
+      ]
     })} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -121,6 +134,24 @@ for (const segment of pathSegments) {
     })} />
   </head>
   <body class="font-body text-gray-800 antialiased">
+    <!-- Phone auto-format XXX-XXX-XXXX on all forms -->
+    <script is:inline>
+      function initPhoneFormat() {
+        document.querySelectorAll('input[type="tel"]').forEach(function(input) {
+          if (input.dataset.formatted) return;
+          input.dataset.formatted = 'true';
+          input.addEventListener('input', function() {
+            var pos = this.selectionStart;
+            var val = this.value.replace(/\D/g, '').substring(0, 10);
+            if (val.length >= 7) this.value = val.slice(0,3) + '-' + val.slice(3,6) + '-' + val.slice(6);
+            else if (val.length >= 4) this.value = val.slice(0,3) + '-' + val.slice(3);
+            else this.value = val;
+          });
+        });
+      }
+      document.addEventListener('DOMContentLoaded', initPhoneFormat);
+      document.addEventListener('astro:page-load', initPhoneFormat);
+    </script>
     <Header />
     <main>
       <slot />

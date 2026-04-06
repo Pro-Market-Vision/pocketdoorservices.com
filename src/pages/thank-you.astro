@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Thank You | Pocket Door Services"
+  description="Thank you for contacting Pocket Door Services. We'll get back to you shortly with a free estimate for your pocket door project."
+>
+
+  <section class="relative bg-primary text-white py-16 md:py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/hero.png')" role="img" aria-label="Pocket Door Services"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/75 to-primary/50"></div>
+    <div class="relative max-w-7xl mx-auto px-4 text-center">
+      <div class="flex justify-center mb-6">
+        <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+      </div>
+      <h1 class="font-heading text-5xl md:text-7xl tracking-wide mb-4">Thank You!</h1>
+      <p class="text-xl md:text-2xl font-light text-gray-200">Your message has been sent successfully.</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-heading text-4xl tracking-wide text-primary mb-4">What Happens Next</h2>
+      <p class="text-gray-600 leading-relaxed mb-8">
+        Our team typically responds within a few hours during business days. We'll review your message and get back to you with honest guidance and a detailed estimate at no cost. For urgent needs, call us directly — we're available 24/7.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12 max-w-3xl mx-auto">
+        <a href="tel:9547275410" class="flex items-center justify-center gap-2 bg-accent text-white font-heading text-lg tracking-wide px-6 py-4 rounded hover:bg-blue-600 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          CALL NOW
+        </a>
+        <a href="/" class="bg-primary text-white font-heading text-lg tracking-wide px-6 py-4 rounded hover:bg-primary/80 transition-colors text-center">BACK TO HOME</a>
+        <a href="/blog" class="bg-primary text-white font-heading text-lg tracking-wide px-6 py-4 rounded hover:bg-primary/80 transition-colors text-center">READ OUR BLOG</a>
+      </div>
+
+      <h3 class="font-heading text-2xl tracking-wide text-primary mb-6">While You Wait, Explore Our Services</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+        <a href="/service/roller-replacement-and-frame-repair" class="text-accent hover:underline text-sm">Roller Replacement & Frame Repair</a>
+        <a href="/service/lock-repair" class="text-accent hover:underline text-sm">Lock Repair</a>
+        <a href="/service/hinge-repair-replacement" class="text-accent hover:underline text-sm">Hinge Repair & Replacement</a>
+        <a href="/service/commercial-door-installation" class="text-accent hover:underline text-sm">Commercial Door Installation</a>
+        <a href="/service/commercial-door-repair" class="text-accent hover:underline text-sm">Commercial Door Repair</a>
+        <a href="/service/commercial-door-lock-services" class="text-accent hover:underline text-sm">Commercial Door Lock Services</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

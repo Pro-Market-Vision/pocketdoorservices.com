@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/location/orlando", "destination": "/location/pocket-door-services-orlando", "permanent": true },
+    { "source": "/location/orlando/", "destination": "/location/pocket-door-services-orlando", "permanent": true },
+    { "source": "/location/miami", "destination": "/location/pocket-door-services-miami", "permanent": true },
+    { "source": "/location/miami/", "destination": "/location/pocket-door-services-miami", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/index.php", "destination": "/", "permanent": true }
+  ]
+}
